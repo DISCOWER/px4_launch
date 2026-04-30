@@ -12,7 +12,7 @@ import subprocess
 import sys
 import time
 import shlex
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from pathlib import Path
 
 # ---------------------------------------------------------------------------
@@ -159,7 +159,9 @@ def _launch_tmux(commands, session, delay):
     forward_keys = [
         "DISPLAY", "WAYLAND_DISPLAY", "XDG_RUNTIME_DIR",
         "LD_LIBRARY_PATH", "GZ_SIM_RESOURCE_PATH",
+        "GZ_SIM_SYSTEM_PLUGIN_PATH",
         "GZ_VERSION", "HOME", "PATH",
+        "GZ_IP", "GZ_RELAY",
     ]
 
     env_exports = "; ".join(

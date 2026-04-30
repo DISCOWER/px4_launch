@@ -58,19 +58,6 @@ micro-xrce-dds-agent udp4 -p 8888
 
 Each vehicle's topics then appear under its name, e.g. `/snap/fmu/out/...`.
 
-**Offboard control of multiple vehicles.** QGroundControl's virtual joystick
-binds to one vehicle at a time, which trips the "manual control lost"
-prearm check on the others. If you only need offboard mode, disable the
-RC requirement by adding
-
-```
-param set-default COM_RC_IN_MODE 4
-```
-
-to the relevant airframe init files (`gz_atmos`, `gz_atmos_dual`,
-`gz_uuv_bluerov2_heavy`, ...), or set the same parameter from the QGC
-parameter editor.
-
 ## Troubleshooting
 
 **`PX4 binary not found at .../build/<target>/bin/px4`** — build the target it asks for:
@@ -86,5 +73,5 @@ make px4_sitl_uuv          # gz_uuv_bluerov2_heavy
 ```bash
 pkill -9 -f 'gz sim'
 pkill -9 -f 'bin/px4'
-tmux kill-server          # nuclear option
+tmux kill-server
 ```
