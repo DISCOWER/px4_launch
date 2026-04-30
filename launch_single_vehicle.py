@@ -6,7 +6,7 @@ from px4_sitl_launcher import launch, Vehicle
 WORLD = "default"
 
 VEHICLES = [
-    Vehicle(name="snap", model="gz_atmos", pose=(1, 0, 0.2)),
+    Vehicle(name="snap", model="gz_atmos", pose=(1, 0, 0.2, 0, 0, 0)),
 ]
 
 SESSION = "atmos1"   # tmux session name

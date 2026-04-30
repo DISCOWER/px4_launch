@@ -6,8 +6,8 @@ from px4_sitl_launcher import launch, Vehicle
 WORLD = "default"
 
 VEHICLES = [
-    Vehicle(name="rov0", model="gz_uuv_bluerov2_heavy", pose=(0, 0, 1)),
-    Vehicle(name="rov1", model="gz_uuv_bluerov2_heavy", pose=(1, 0, 1)),
+    Vehicle(name="rov0", model="gz_uuv_bluerov2_heavy", pose=(0, 0, 1, 0, 0, 0)),
+    Vehicle(name="rov1", model="gz_uuv_bluerov2_heavy", pose=(1, 0, 1, 0, 0, 0)),
 ]
 
 SESSION = "bluerov"   # tmux session name
