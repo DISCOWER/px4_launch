@@ -10,7 +10,7 @@ VEHICLES = [
     Vehicle(name="rov1", model="gz_uuv_bluerov2_heavy", pose=(1, 0, 1, 0, 0, 0)),
 ]
 
-SESSION = "bluerov"   # tmux session name
+SESSION = "bluerov"   # state and log session name
 
 if __name__ == "__main__":
     launch(vehicles=VEHICLES, world=WORLD, session=SESSION)

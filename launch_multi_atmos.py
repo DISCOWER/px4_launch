@@ -6,12 +6,12 @@ from px4_sitl_launcher import launch, Vehicle
 WORLD = "kthspacelab" # "default"
 
 VEHICLES = [
-    Vehicle(name="snap",    model="gz_atmos", pose=(1, 0, 1, 0, 0, 0)),
-    Vehicle(name="crackle", model="gz_atmos", pose=(2, 0, 1, 0, 0, 0)),
-    Vehicle(name="pop",     model="gz_atmos", pose=(3, 0, 1, 0, 0, 0)),
+    Vehicle(name="snap",    model="gz_atmos", pose=(1.5, 0, 0, 0, 0, 0)),
+    Vehicle(name="crackle", model="gz_atmos", pose=(2.5, 0, 0, 0, 0, 0)),
+    Vehicle(name="pop",     model="gz_atmos", pose=(0.5, 0, 0, 0, 0, 0)),
 ]
 
-SESSION = "atmos"   # tmux session name
+SESSION = "atmos"   # state and log session name
 
 if __name__ == "__main__":
     launch(vehicles=VEHICLES, world=WORLD, session=SESSION)
